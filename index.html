@@ -29,6 +29,7 @@
 
 function bgcolor(){
  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
+
  var rndColor = rndNum()+','+rndNum()+','+rndNum();
  jQuery('body').css('background','rgb('+rndColor+')'); 
 }
@@ -39,8 +40,7 @@ jQuery('*').click( function(){ bgcolor(); });
 var mcount=-20;
 var intervalId = window.setInterval(function(){
  bgcolor();
- mcount+=5;
- if(mcount>30){mcount=-20;}
+ mcount+=5; if(mcount>30){mcount=-20;}
  jQuery("#kcc").css("margin-left",mcount+"px");
 }, 5000);
 
