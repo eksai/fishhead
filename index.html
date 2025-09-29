@@ -4,22 +4,22 @@
 <title>Fishhead Info</title>
 <style>
  body {background:rgb(216,216,216);
- img {width:200px;}
+ #kcc {width:200px;margin:-20px;}
 </style>
 </head>
 <body>
 
 <p><img id="kcc" src="KCC_playlistface.png" alt=""></p>
 <p>
-<li><a href="booksIread.pdf">booksIread.pdf</a></li>
-<li><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a></li>
-<li><a href="allusions.pdf">allusions.pdf</a></li>
+ <li><a href="booksIRead.pdf">booksIRead.pdf</a></li>
+ <li><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a></li>
+ <li><a href="allusions.pdf">allusions.pdf</a></li>
+ <!--the pw is in the book-->
 </p>
 
 <p>Go to <a href="https://soundcloud.com/fishhead1986" target="_self">soundcloud.com/fishhead1986</a></p>
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
-
 <script>
  /*var today = new Date();
  var DD = today.getDate().toString();if(DD<=9){DD="0"+DD;}
@@ -33,7 +33,16 @@ function bgcolor(){
  jQuery('body').css('background','rgb('+rndColor+')'); 
 }
 bgcolor();
+
 jQuery('*').click( function(){ bgcolor(); });
+
+var mcount=-20;
+var intervalId = window.setInterval(function(){
+ bgcolor();
+ mcount+=5;
+ if(mcount>30){mcount=-20;}
+ jQuery("#kcc").css("margin-left",mcount+"px");
+}, 5000);
 
 </script>
 
