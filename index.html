@@ -1,14 +1,14 @@
 <html>
 <head>
-<title>Allusions</title>
+<title>Fishhead Info</title>
+<style>
+ body {background:rgb(216,216,216);
+ img {width:200px;}
+</style>
 </head>
 <body>
 
-<style>
- img {width:200px;}
-</style>
-
-<p><a href="https://soundcloud.com/fishhead1986" alt=""><img src="KCC_playlistface.png" alt=""></a></p>
+<p><img id="kcc" src="KCC_playlistface.png" alt=""></p>
 <p>
 <li><a href="booksIread.pdf">booksIread.pdf</a></li>
 <li><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a></li>
@@ -16,6 +16,25 @@
 </p>
 
 <p>Go to <a href="https://soundcloud.com/fishhead1986">soundcloud.com/fishhead1986</a></p>
+
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+<script>
+ /*var today = new Date();
+ var DD = today.getDate().toString();if(DD<=9){DD="0"+DD;}
+ var MM = parseInt(today.getMonth())+1;if(MM<=9){MM="0"+MM;}
+ theToday = today.getFullYear().toString()+MM+DD;
+ jQuery("title").text(theToday); */
+
+function bgcolor(){
+ function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
+ var rndColor = rndNum()+','+rndNum()+','+rndNum();
+ jQuery('body').css('background','rgb('+rndColor+')'); 
+}
+bgcolor();
+jQuery('*').click( function(){ bgcolor(); });
+
+</script>
 
 </body>
 </html>
