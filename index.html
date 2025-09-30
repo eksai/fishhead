@@ -4,32 +4,24 @@
 <title>Fishhead Info</title>
 <style>
  body {background:rgb(216,216,216);
- #kcc {width:200px;margin:-20px;}
+ #kcc {width:300px;margin:-20px;}
+ p,li {font-size: 50px;text-align: center;}
+ #thediv {width:100%;}
 </style>
 </head>
 <body>
 
-<p><img id="kcc" src="KCC_playlistface.png" alt=""></p>
-<p>
- <li><a href="booksIRead.pdf">booksIRead.pdf</a></li>
- <li><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a></li>
- <li><a href="allusions.pdf">allusions.pdf</a></li>
- <!--the pw is in the book-->
-</p>
-
+<div id="thediv"><p><a href="https://soundcloud.com/fishhead1986" target="_self"><img id="kcc" src="KCC_playlistface.png" alt=""></a></p>
+<p><a href="booksIRead.pdf">booksIRead.pdf</a></p>
+<p><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a></p>
+<p><a href="allusions.pdf">allusions.pdf</a></p>
 <p>Go to <a href="https://soundcloud.com/fishhead1986" target="_self">soundcloud.com/fishhead1986</a></p>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
- /*var today = new Date();
- var DD = today.getDate().toString();if(DD<=9){DD="0"+DD;}
- var MM = parseInt(today.getMonth())+1;if(MM<=9){MM="0"+MM;}
- theToday = today.getFullYear().toString()+MM+DD;
- jQuery("title").text(theToday); */
 
 function bgcolor(){
  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
-
  var rndColor = rndNum()+','+rndNum()+','+rndNum();
  jQuery('body').css('background','rgb('+rndColor+')'); 
 }
@@ -37,12 +29,9 @@ bgcolor();
 
 jQuery('*').click( function(){ bgcolor(); });
 
-var mcount=-20;
 var intervalId = window.setInterval(function(){
  bgcolor();
- mcount+=5; if(mcount>30){mcount=-20;}
- jQuery("#kcc").css("margin-left",mcount+"px");
-}, 5000);
+}, 2000);
 
 </script>
 
