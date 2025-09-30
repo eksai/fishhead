@@ -1,0 +1,43 @@
+<html>
+<head>
+ <base target="_blank">
+<title>Fishhead Info</title>
+<style>
+ body {background:rgb(216,216,216);
+ #kcc {width:200px;margin:-20px;}
+ p,li {font-size: 20px;}
+</style>
+</head>
+<body>
+
+<p><a href="https://soundcloud.com/fishhead1986" target="_self"><img id="kcc" src="KCC_playlistface.png" alt=""></a></p>
+<p>
+ <li><a href="booksIRead.pdf">booksIRead.pdf</a></li>
+ <li><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a></li>
+ <li><a href="allusions.pdf">allusions.pdf</a></li>
+</p>
+<p>Go to <a href="https://soundcloud.com/fishhead1986" target="_self">soundcloud.com/fishhead1986</a></p>
+
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script>
+if(window.innerWidth<=480){
+ jQuery("p,li").css("font-size","40px");
+}
+
+function bgcolor(){
+ function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
+ var rndColor = rndNum()+','+rndNum()+','+rndNum();
+ jQuery('body').css('background','rgb('+rndColor+')'); 
+}
+bgcolor();
+
+jQuery('*').click( function(){ bgcolor(); });
+
+var intervalId = window.setInterval(function(){
+ bgcolor();
+}, 2000);
+
+</script>
+
+</body>
+</html>
