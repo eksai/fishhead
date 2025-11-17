@@ -7,7 +7,7 @@
  #kcc {width:300px;margin:-20px;}
  p    {font-size: 40px;text-align: center;}
  #thediv {width:100%;}
- hr{
+hr{
   border: none;
   height: 2px;
   background-color: #aaa;
@@ -18,35 +18,25 @@
 </head>
 <body>
 
-<div id="thediv"><p><a href="https://soundcloud.com/fishhead1986" target="_self"><img id="kcc" src="KCC_playlistface.png" alt=""></a></p>
+<div id="thediv"><p><a href="https://soundcloud.com/fishhead1986" target="_self"><img id="kcc" src="KCC_playlistface.png" alt=""></a>
 
-<p>From: <i>Fishhead</i> (book) by Jeff Morin, 2024 (available on Amazon).<BR />
+<p><a href="booksIRead.pdf">booksIRead.pdf</a>
+<BR/><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a>
+<BR/><a href="waPostDarraArticle.pdf">waPostDarraArticle.pdf</a></p>
+
+<p class="dayabayadaya"><a href="allusions.pdf">allusions.pdf</a>&nbsp;<img class="lock" src="lock.png">
+<BR/><a href="postCOSReports.pdf">postCOSReports.pdf</a>&nbsp;<img class="lock" src="lock.png">
+<BR/><a href="miscExtras.pdf">miscExtras.pdf</a>&nbsp;<img class="lock" src="lock.png">
+<BR/><a href="SolutionToPuzzle.pdf">SolutionToPuzzle.pdf</a>&nbsp;<img class="lock" src="lock.png"></p>
+
+<hr>
+
+<p>Go to <a href="https://soundcloud.com/fishhead1986" target="_self">soundcloud.com/fishhead1986</a></p>
+
+<p>From: <i>Fishhead</i> by Jeff Morin, 2024 (available on Amazon).<BR />
 <a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH">amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH</a></p>
 
-<p><strong>SOUND FILES</strong></p>
-
-<p>"Himal Chuchuri" excerpt. Duration: 0:23.<BR />
-re: Journal, October 8, 1984.<BR />
-<audio controls>
-  <source src="HimalChuchuri_Fishhead1986.mp3" type="audio/mpeg">
-</audio></p>
-
-<p>Kids at my House. Duration: 03:56.<BR />
-re: Journal, June 15, 1986.<BR />
-<audio controls>
-  <source src="Kids_Fishhead1986.mp3" type="audio/mpeg">
-</audio></p>
-
-<p>Musicians at my House. Duration: 0:24.<BR />
-re: Journal, June 28, 1986.<BR />
-<audio controls>
-  <source src="Musicians_Fishhead1986.mp3" type="audio/mpeg">
-</audio></p>
-
-<p><a href="index2.html">Other files</a></p>
 </div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
@@ -59,21 +49,11 @@ function bgcolor(){
 bgcolor();
 
 jQuery('*').click(function(){bgcolor();});
+jQuery('.lock').click(function(){ alert('You need the unlock combination'); });
 
 var intervalId = window.setInterval(function(){
  bgcolor();
 }, 5000);
-
-/* make it so only one sound file plays at a time */
-document.addEventListener('play', function(e){  
- var audios = document.getElementsByTagName('audio');  
- for(var i = 0, len = audios.length; i < len;i++){  
-   if(audios[i] != e.target){
-     audios[i].pause();
-     audios[i].currentTime = 0;
-   }  
- }
-}, true);
 
 </script>
 
