@@ -44,18 +44,19 @@ hr{
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
-
+/*
 function bgcolor(){
  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
  var rndColor = rndNum()+','+rndNum()+','+rndNum();
  jQuery('body').css('background','rgb('+rndColor+')'); 
 }
-//bgcolor();
+bgcolor();
 var intervalId = window.setInterval(function(){
- //bgcolor();
+ bgcolor();
 }, 5000);
-
 jQuery('*').click(function(){bgcolor();});
+*/
+
 jQuery('.lock').click(function(){ alert('You need the unlock combination'); });
 
 </script>
