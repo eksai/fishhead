@@ -3,26 +3,30 @@
  <base target="_blank">
 <title>Fishhead Info</title>
 <style>
- body {
-  background-image: url('staring_bg.png');
-  background-repeat: repeat;
-}
- #kcc {width:300px;margin:-20px;}
- p    {font-size: 40px;text-align: center;}
- #thediv {width:100%;}
-hr{
-  border: none;
-  height: 2px;
-  background-color: #000;
-  width: 350px;
-  /* margin-left:0; */
- }
+
+body {background-image: url('staring_bg.png');
+      background-repeat: repeat;
+     }
+p {font-size:40px;text-align: center;}
+#thediv {width:100%;}
+#kcc {width:300px;height:300px;}
+#kccdiv {width:300px; margin: 0 auto;
+         background:rgb(255,255,255);
+        }
+hr {border: none;
+    height: 2px;
+    background-color: #000;
+    width: 350px;
+    /* margin-left:0; */
+    }
+
 </style>
 </head>
 <body>
-<div id="thediv"><p><img id="kcc" src="KCC_playlistface.png" alt=""></p>
+<div id="thediv">
+<div id="kccdiv"><img id="kcc" src="KCC_clearbody.png" alt=""></div>
 
-<p><a href="booksIRead.pdf">booksIRead.pdf</a>
+<p style="margin-top:-10px;"><a href="booksIRead.pdf">booksIRead.pdf</a>
 <BR/><a href="didiCassetteSongs.pdf">didiCassetteSongs.pdf</a>
 <BR/><a href="waPostDarraArticle.pdf">waPostDarraArticle.pdf</a></p>
 
@@ -43,6 +47,17 @@ hr{
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
 $(".lock").click(function(){alert("You need the unlock combination.")});
+
+function thecolor(){
+  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
+  var rndColor = rndNum()+','+rndNum()+','+rndNum();
+  //jQuery('body').css('background','rgb(' +rndColor+ ')');
+  jQuery('#kccdiv').css('background-color','rgb(' +rndColor+ ')')
+}
+//thecolor();
+setInterval(function(){ thecolor(); },3000);
+
+
 </script>
 </body>
 </html>
