@@ -61,6 +61,13 @@ $('.lock').click( function(){
  alert(lock[lockcount]);
  lockcount++;if(lockcount>2){lockcount=0;}
 });
+$('#kcc').mousedown( function(){
+ $('#kccdiv').css('background','rgb(255,0,0)');
+});
+$('#kcc').mouseout( function(){
+ thecolor();
+});
+
 </script>
 </body>
 </html>
