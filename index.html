@@ -47,17 +47,20 @@ hr {border: none;
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
-$(".lock").click(function(){alert("You need the unlock combination.")});
-
 function thecolor(){
-  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
-  var rndColor = rndNum()+','+rndNum()+','+rndNum();
-  //jQuery('body').css('background','rgb(' +rndColor+ ')');
-  jQuery('#kccdiv').css('background-color','rgb(' +rndColor+ ')')
+ function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
+ var rndColor = rndNum()+','+rndNum()+','+rndNum();
+ //$('body').css('background','rgb(' +rndColor+ ')');
+ $('#kccdiv').css('background-color','rgb(' +rndColor+ ')')
 }
-//thecolor();
+thecolor();
 setInterval(function(){ thecolor(); },3000);
-
+var lockcount=0;
+let lock=["Add another v to seventeen.", "Must tell the name of who was on the roof.", "For once, you can count on absentmindednesses."];
+$('.lock').click( function(){
+ alert(lock[lockcount]);  
+ lockcount++;if(lockcount>2){lockcount=0;}
+});
 </script>
 </body>
 </html>
