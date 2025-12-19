@@ -67,10 +67,11 @@ $('.lock').click( function(){
  lockcount++;if(lockcount>lock.length-1){lockcount=0;}
 });
 $('#kcc').mousedown( function(){
- $('#kccdiv').css('background','rgb(255,0,0)');
+ $('#kccdiv').css('background','rgb(0,230,0)');
  setTimeout(function(){
-  alert("Remember the rewards of perseverance and skill.\n\u00A0\u00A0\u00A0\u00A0\u00A0\u2014Rufus Scrimgeour, 'Deathly Harrows.'");},200);
-});
+  alert("Remember the rewards of perseverance and skill.\n\u2014Rufus Scrimgeour, 'Deathly Hallows.'");},100);
+}); /*unicode hard space*/
+
 $('#kcc').mouseout( function(){
  thecolor();
 });
