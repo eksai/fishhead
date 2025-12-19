@@ -11,7 +11,7 @@ body {background-image: url('staring_bg.png');
 p {font-size:40px;text-align: center;}
 #thediv {width:100%;}
 #kcc {width:300px;height:300px;}
-#kccdiv {width:300px; margin: 0 auto;
+#kccdiv {width:300px;height:300px; margin: 0 auto;
          background:rgb(255,255,255);
         }
 hr {border: none;
@@ -58,10 +58,9 @@ thecolor();
 setInterval(function(){ thecolor(); },3000);
 var lockcount=0;
 let lock=[
-"Add another v to seventeen.",
-"Must tell the name of who was on the roof.",
-"Now you can count on absentmindednesses.",
-"Remember the rewards of perseverance and skill.\n\u00A0\u00A0\u00A0\u00A0\u00A0\u2014Rufus Scrimgeour, 'Deathly Harrows'."
+ "Add another v to seventeen.",
+ "Must tell the name of who was on the roof.",
+ "Now you can count on absentmindednesses."
 ];
 $('.lock').click( function(){
  alert(lock[lockcount]);
@@ -69,6 +68,8 @@ $('.lock').click( function(){
 });
 $('#kcc').mousedown( function(){
  $('#kccdiv').css('background','rgb(255,0,0)');
+ setTimeout(function(){
+  alert("Remember the rewards of perseverance and skill.\n\u00A0\u00A0\u00A0\u00A0\u00A0\u2014Rufus Scrimgeour, 'Deathly Harrows.'");},200);
 });
 $('#kcc').mouseout( function(){
  thecolor();
