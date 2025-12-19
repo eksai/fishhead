@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html><!--(\0o53002\)-->
 <head>
  <base target="_blank">
@@ -56,10 +57,15 @@ function thecolor(){
 thecolor();
 setInterval(function(){ thecolor(); },3000);
 var lockcount=0;
-let lock=["Add another v to seventeen.", "Must tell the name of who was on the roof.", "Now you can count on absentmindednesses."];
+let lock=[
+"Add another v to seventeen.",
+"Must tell the name of who was on the roof.",
+"Now you can count on absentmindednesses.",
+"Remember the rewards of perseverance and skill.\n\u00A0\u00A0\u00A0\u00A0\u00A0\u2014Rufus Scrimgeour, 'Deathly Harrows'."
+];
 $('.lock').click( function(){
  alert(lock[lockcount]);
- lockcount++;if(lockcount>2){lockcount=0;}
+ lockcount++;if(lockcount>lock.length-1){lockcount=0;}
 });
 $('#kcc').mousedown( function(){
  $('#kccdiv').css('background','rgb(255,0,0)');
