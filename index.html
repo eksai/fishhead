@@ -49,7 +49,7 @@ hr {border: none;
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 function thecolor(){
  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
@@ -66,18 +66,33 @@ let lock=[
  "Now you can count on absentmindednesses."
 ];
 $('.lock').click( function(){
- alert(lock[lockcount]);
- lockcount++;if(lockcount>lock.length-1){lockcount=0;}
+ if(lockcount<lock.length){alert(lock[lockcount]);}
+ if(lockcount>=lock.length){alert("Reload the page to read them again.");}
+ lockcount++;
 });
 $('#kcc').mousedown( function(){
+ blink(2000,500);
  $('#kccdiv').css('background','rgb(0,230,0)');
  setTimeout(function(){
   alert("Remember the rewards of perseverance and skill.\n\u2014Rufus Scrimgeour, 'Deathly Hallows.'");},100);
 }); /*unicode hard space*/
-
 $('#kcc').mouseout( function(){
  thecolor();
 });
+
+function blink(time,interval){
+  var timer = window.setInterval(function(){
+   $(".lock").css("opacity", "0.1");
+   window.setTimeout(function(){
+   $(".lock").css("opacity", "1");
+  }, 100);
+ }, interval);
+ window.setTimeout(function(){clearInterval(timer);}, time);
+}
+setTimeout(function(){
+ for(x=0;x<3;x++){blink(2000,500);}
+},20000);
+
 
 </script>
 </body>
