@@ -11,6 +11,7 @@ body {background-image: url('staring_bg.png');
 p {font-size:40px;text-align: center;}
 #thediv {width:100%;}
 #kcc {width:300px;height:300px;}
+#kcc:hover,.lock:hover {cursor:pointer;}
 #kccdiv {width:300px;height:300px; margin: 0 auto;
          background:rgb(255,255,255);
         }
@@ -59,19 +60,20 @@ function thecolor(){
 }
 thecolor();
 setInterval(function(){ thecolor(); },3000);
-var lockcount=0;
+var lockcount=0,blinkr=true;
 let lock=[
  "Add another v to seventeen.",
  "Must tell the name of who was on the roof.",
  "Now you can count on absentmindednesses."
 ];
 $('.lock').click( function(){
- if(lockcount<lock.length){alert(lock[lockcount]);}
- if(lockcount>=lock.length){alert("Reload the page to read them again.");}
- lockcount++;
+ blinkr=false;
+ alert(lock[lockcount]);lockcount++;
+ if(lockcount>=lock.length){lockcount=0;}
+
 });
 $('#kcc').mousedown( function(){
- blink(2000,500);
+ blink(2000,500);blinkr=false;
  $('#kccdiv').css('background','rgb(0,230,0)');
  setTimeout(function(){
   alert("Remember the rewards of perseverance and skill.\n\u2014Rufus Scrimgeour, 'Deathly Hallows.'");},100);
@@ -90,8 +92,10 @@ function blink(time,interval){
  window.setTimeout(function(){clearInterval(timer);}, time);
 }
 setTimeout(function(){
- for(x=0;x<3;x++){blink(2000,500);}
-},20000);
+ if(blinkr){
+  for(x=0;x<3;x++){blink(2000,500);}
+ }
+},10000);
 
 
 </script>
