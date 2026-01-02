@@ -21,7 +21,8 @@ hr {border: none;
     width: 350px;
     /* margin-left:0; */
     }
-#mp3s{width:100%;}
+#showhide{cursor:pointer;text-decoration:underline;color:#0000EE;}
+#mp3s{width:100%;display:none;}
 
 
 </style>
@@ -51,7 +52,9 @@ hr {border: none;
 <p>*SEE ALSO*<BR /><a href="http://www.amazon.com/author/jeffmorin">amazon.com/author/jeffmorin</a></p>
 </div>
 
+<hr>
 
+<p><span id="showhide">SHOW / HIDE</span><BR />
 <div id="mp3s">
 <audio>
  Your browser can't play these files.
@@ -62,19 +65,20 @@ hr {border: none;
 <p><strong><i>Himal Chuchuri</i> excerpt</strong><br />
 <audio controls>
 <source src="HimalChuchuri_Fishhead1986.mp3" type="audio/mpeg">
-</audio></p>
-
-<p><strong>Musicians</strong><br />
+</audio><BR />
+<strong>Musicians</strong><br />
 <audio controls>
   <source src="Musicians_Fishhead1986.mp3" type="audio/mpeg">
-</audio></p>
-
-<p><strong>Kids singing in Nepali</strong><br />
+</audio><BR />
+<strong>Kids singing in Nepali</strong><br />
 <audio controls>
   <source src="Kids_Fishhead1986.mp3" type="audio/mpeg">
 </audio></p>
 </div>
+</p>
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
@@ -122,6 +126,10 @@ setTimeout(function(){
   for(x=0;x<3;x++){blink(2000,500);}
  }
 },10000);
+
+$("#showhide").click(function(){
+ $("#mp3s").toggle();
+});
 
 
 </script>
