@@ -22,7 +22,7 @@ hr {border: none;
     /* margin-left:0; */
     }
 #showhide{cursor:pointer;text-decoration:underline;color:#0000EE;}
-#mp3s{width:100%;display:none;}
+#mp3s{width:100%;display:none;background:rgb(0,100,100,0.1);}
 
 
 </style>
@@ -131,6 +131,16 @@ $("#showhide").click(function(){
  $("#mp3s").toggle();
 });
 
+/* make it so only one plays at a time */
+document.addEventListener('play', function(e){  
+ var audios = document.getElementsByTagName('audio');  
+ for(var i = 0, len = audios.length; i < len;i++){  
+   if(audios[i] != e.target){
+     audios[i].pause();
+     //audios[i].currentTime = 0;
+   }  
+ }
+}, true);
 
 </script>
 </body>
