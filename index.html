@@ -21,6 +21,7 @@ hr {border: none;
     width: 350px;
     /* margin-left:0; */
     }
+#hideuntil{display:none;}
 #showhide{cursor:pointer;text-decoration:underline;color:#0000EE;}
 #mp3s{width:100%;display:none;background:rgb(0,100,100,0.1);}
 
@@ -49,7 +50,9 @@ hr {border: none;
 <p>Go to <a href="https://soundcloud.com/fishhead1986" target="_self">soundcloud.com/fishhead1986</a></p>
 
 <p>Stuff on this page is from<BR /><a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH"><i>Fishhead</i> by Jeff Morin.</a></p>
-<p>*SEE ALSO*<BR /><a href="http://www.amazon.com/author/jeffmorin">amazon.com/author/jeffmorin</a></p>
+
+<p><span  id="hideuntil">*SEE ALSO*<BR /><a href="http://www.amazon.com/author/jeffmorin">amazon.com/author/jeffmorin</a></span></p>
+
 </div>
 
 <hr>
@@ -82,6 +85,11 @@ hr {border: none;
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
+
+var timr=new Date();if(timr.getTime()>=1777705200000){ /*20260502*/ 
+ document.getElementById("hideuntil").style.display="inline";
+}
+
 function thecolor(){
  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;}
  var rndColor = rndNum()+','+rndNum()+','+rndNum();
