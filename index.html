@@ -37,6 +37,32 @@ hr {border: none;
 <div id="thediv">
 <div id="kccdiv"><img id="kcc" src="KCC_clearbody.png" alt=""></div>
 
+<p>Sound files from <i>Fishhead</i>.
+<BR />(Pinch in if you can't see the controller.)</p>
+
+<audio>
+ Your browser can't play the files below. Click the file name to download it.
+</audio>
+<p><strong><i><a href="HimalChuchuri_Fishhead1986.mp3">Himal Chuchuri</a></i> excerpt</strong> (book&nbsp;Oct.&nbsp;8,&nbsp;1984)<br />
+<audio controls>
+<source src="HimalChuchuri_Fishhead1986.mp3" type="audio/mpeg">
+</audio>
+
+<BR />
+<strong><a href="Kids_Fishhead1986.mp3">Kids singing</a></strong> (book&nbsp;June&nbsp;15,&nbsp;1986)<br />
+<audio controls>
+  <source src="Kids_Fishhead1986.mp3" type="audio/mpeg">
+</audio>
+
+<BR />
+<strong><a href="Musicians_Fishhead1986.mp3">Musicians</a></strong> (book&nbsp;June&nbsp;28,&nbsp;1986)<br />
+<audio controls>
+  <source src="Musicians_Fishhead1986.mp3" type="audio/mpeg">
+</audio>
+</p>
+
+<hr>
+
 <p>These are items I mentioned in the book<BR />but aren't particularly important.</p>
 
 <p style="margin-top:-10px;"><a href="BooksIRead.pdf">BooksIRead.pdf</a>
@@ -59,37 +85,14 @@ hr {border: none;
 
 <hr>
 
-<p>Stuff above is from<BR /><a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH"><i>Fishhead</i> by Jeff Morin.</a></p>
 
-<p><span id="hideuntil">*SEE ALSO*<BR /><a href="http://www.amazon.com/author/jeffmorin">amazon.com/author/jeffmorin</a></span></p>
 
-<p>*SEE ALSO <a href="https://soundcloud.com/fishhead1986" target="_self">soundcloud.com/fishhead1986</a>
-<BR /><span id="showhide">SHOW / HIDE</span><BR />
-<div id="mp3s">
-<audio>
- Your browser can't play the files below. Try the SoundCloud link instead.
-</audio>
-
-<p>In case you missed these on Soundcloud:
-<BR />(Pinch in if you can't see the controller.)</p>
-
-<p><strong><i>Himal Chuchuri</i> excerpt</strong> (book&nbsp;Oct.&nbsp;8,&nbsp;1984)<br />
-<audio controls>
-<source src="HimalChuchuri_Fishhead1986.mp3" type="audio/mpeg">
-</audio><BR />
-<strong>Musicians</strong> (book&nbsp;June&nbsp;28,&nbsp;1986)<br />
-<audio controls>
-  <source src="Musicians_Fishhead1986.mp3" type="audio/mpeg">
-</audio><BR />
-<strong>Kids singing</strong> (book&nbsp;June&nbsp;15,&nbsp;1986)<br />
-<audio controls>
-  <source src="Kids_Fishhead1986.mp3" type="audio/mpeg">
-</audio></p>
 </div>
 </p>
 
 </div>
 
+<p>Stuff above is from<BR /><a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH"><i>Fishhead</i> by Jeff Morin.</a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -145,10 +148,6 @@ setTimeout(function(){
   for(x=0;x<3;x++){blink(2000,500);}
  }
 },10000);
-
-$("#showhide").click(function(){
- $("#mp3s").toggle();
-});
 
 /* make it so only one plays at a time */
 document.addEventListener('play', function(e){  
