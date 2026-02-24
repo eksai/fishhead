@@ -21,7 +21,6 @@ hr {border: none;
     /* margin-left:0; */
     }
 #sentence{width:50%;}
-#hideuntil{display:none;}
 #showhide{cursor:pointer;text-decoration:underline;color:#0000EE;}
 #mp3s{width:100%;display:none;background:rgb(0,100,100,0.1);}
 
@@ -31,7 +30,7 @@ hr {border: none;
 
 <!--
  No, the unlock combination isn't hidden
- in the HTML. Give me some credit!
+ here. But there are many clues!
 -->
 
 <div id="thediv">
@@ -39,6 +38,8 @@ hr {border: none;
 
 <p>Sound files from <i>Fishhead</i>.
 <BR />(Pinch in if you can't see the controller.)</p>
+
+<!--I created each audio file from my original cassette tape or using a music synthesizer.-->
 
 <audio>
  Your browser can't play the files below. Click the file name to download it.
@@ -84,23 +85,23 @@ hr {border: none;
 <BR /><a href="SolutionToPuzzle.pdf">SolutionToPuzzle.pdf</a>&nbsp;<img class="lock" src="lock.png"></p>
 
 <hr>
-
-
-
 </div>
 </p>
-
 </div>
 
-<p>Stuff above is from<BR /><a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH"><i>Fishhead</i> by Jeff Morin.</a></p>
+<p>Stuff above is from<BR /><a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH"><i>Fishhead</i> by Jeff Morin.</a>
+<BR /><span id="hb2me"></span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+<!--==================================-->
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 
-var timr=new Date();if(timr.getTime()>=1777705200000){ /*20260502*/ 
- document.getElementById("hideuntil").style.display="inline";
+var timr=new Date();
+if(timr.getMonth()==4&&timr.getDate()==2){ 
+ document.getElementById("hb2me").innerHTML="Happy Birthday, Jeff!";
 }
 
 function thecolor(){
@@ -116,14 +117,14 @@ let lock=[
  "Add another v to seventeen.",
  "Must tell the name of who was on the roof.",
  "Now you can count on absentmindednesses.",
- "So there for you the clues await\nbut there's no invalid character state.\nSo quickly learn: just think of that\nuntil you each answer comes at!"
-];
+ "So there for you the clues await\nimagine invalid character state!\nSo quickly learn: just think of that\nand you each answer will come at!"];
+
 $('.lock').click( function(){
  blinkr=false;
  alert(lock[lockcount]);lockcount++;
  if(lockcount>=lock.length){lockcount=0;}
-
 });
+
 $('#kcc').mousedown( function(){
  blink(2000,500);blinkr=false;
  $('#kccdiv').css('background','rgb(0,230,0)');
@@ -147,7 +148,7 @@ setTimeout(function(){
  if(blinkr){
   for(x=0;x<3;x++){blink(2000,500);}
  }
-},10000);
+},5000);
 
 /* make it so only one plays at a time */
 document.addEventListener('play', function(e){  
