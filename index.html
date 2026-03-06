@@ -23,7 +23,6 @@ hr {border: none;
     /* margin-left:0; */
     }
 #sentence{width:50%;}
-#showhide{cursor:pointer;text-decoration:underline;color:#0000EE;}
 #mp3s{width:100%;display:none;background:rgb(0,100,100,0.1);}
 .center {
   display: block;
@@ -31,6 +30,8 @@ hr {border: none;
   margin-right: auto;
   width: 50%;
 }
+#info1 {cursor:pointer;text-decoration:underline;color:#0000EE;}
+
 -->
 </style>
 
@@ -53,7 +54,7 @@ hr {border: none;
 <audio>
  Your browser can't play the files below. Click the file name to download it.
 </audio>
-<p><strong><i><a href="HimalChuchuri_Fishhead1986.mp3">Himal Chuchuri</a></i> excerpt</strong> (book&nbsp;Oct.&nbsp;8,&nbsp;1984)<br />
+<p><strong><i><a href="HimalChuchuri_Fishhead1986.mp3">Himal Chuchuri</a></i> excerpt</strong> (book&nbsp;Oct.&nbsp;8,&nbsp;1984) <span id="info1">?</span><br />
 <audio controls>
 <source src="HimalChuchuri_Fishhead1986.mp3" type="audio/mpeg">
 </audio>
@@ -170,6 +171,10 @@ document.addEventListener('play', function(e){
    }  
  }
 }, true);
+
+$("#info1").click( function(){
+ alert("Author created the sound file.");
+});
 
 </script>
 </body>
