@@ -54,7 +54,7 @@ hr {border: none;
 <audio>
  Your browser can't play the files below. Click the file name to download it.
 </audio>
-<p><strong><i><a href="HimalChuchuri_Fishhead1986.mp3">Himal Chuchuri</a></i> excerpt</strong> (book&nbsp;Oct.&nbsp;8,&nbsp;1984) <span id="info1">?</span><br />
+<p><strong><i><a href="HimalChuchuri_Fishhead1986.mp3">Himal Chuchuri</a></i> excerpt</strong> (book&nbsp;Oct.&nbsp;8,&nbsp;1984) <span id="info1">?</span></BR>
 <audio controls>
 <source src="HimalChuchuri_Fishhead1986.mp3" type="audio/mpeg">
 </audio>
@@ -162,7 +162,7 @@ setTimeout(function(){
 },5000);
 
 /* make it so only one plays at a time */
-document.addEventListener('play', function(e){  
+document.addEventListener('play', function(e){ 
  var audios = document.getElementsByTagName('audio');  
  for(var i = 0, len = audios.length; i < len;i++){  
    if(audios[i] != e.target){
@@ -172,8 +172,9 @@ document.addEventListener('play', function(e){
  }
 }, true);
 
+
 $("#info1").click( function(){
- alert("Author created the sound file.");
+ alert("Author created the sound file of just this portion of the song. You can probably find complete versions of the song online.");
 });
 
 </script>
