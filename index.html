@@ -9,7 +9,7 @@
 body {background-image: url('staring_bg.png');
       background-repeat: repeat;
      }
-p {font-size:40px;text-align: center;}
+p,#aboutme {font-size:40px;text-align: center;}
 #thediv {width:100%;}
 #kcc {width:300px;height:300px;}
 #kcc:hover,.lock:hover {cursor:pointer;}
@@ -101,7 +101,7 @@ hr {border: none;
 
 <p>Stuff above is from<BR /><a href="https://www.amazon.com/Fishhead-How-I-Saved-The-World/dp/B0CTQTKVZH"><i>Fishhead</i> by Jeff Morin.</a>
 <BR />This webpage created by the author.
-<BR /><span id="hb2me"></span></p>
+<BR /><span id="aboutme"></span></p>
 <img class="center" style="width:94px;height:200px;" src="lotus_mine.png" alt="">
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -112,8 +112,11 @@ hr {border: none;
 <script>
 
 var timr=new Date();
-if(timr.getMonth()==4&&timr.getDate()==2){ 
- document.getElementById("hb2me").innerHTML="Happy Birthday, Jeff!";
+if(timr.getFullYear()>=2027{
+ document.getElementById("aboutme").innerHTML="See also <a href='http://amazon.com/author/jeffmorin'>amazon.com/author/jeffmorin</a>";
+}
+if(timr.getMonth()==4 && timr.getDate()==2){
+ document.getElementById("aboutme").innerHTML="Happy Birthday, Jeff!";
 }
 
 function thecolor(){
