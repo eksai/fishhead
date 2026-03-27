@@ -24,12 +24,11 @@ hr {border: none;
     }
 #sentence{width:50%;}
 #mp3s{width:100%;display:none;background:rgb(0,100,100,0.1);}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+.center {display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+        }
 #info1 {cursor:pointer;text-decoration:underline;color:#0000EE;}
 
 -->
@@ -127,11 +126,12 @@ function thecolor(){
 }
 thecolor();
 setInterval(function(){ thecolor(); },3000);
+
 var lockcount=0,blinkr=true;
 let lock=[
  "Radio Day might help you some\nTo look inside the book.\nIf not, then click again for clues\nAnd take a longer look.",
  "\u2022 Add another v to seventeen.\n\n\u2022 Must tell the name of who was on the roof.\n\n\u2022 Now you can count on absentmindednesses.",
- "If not for you these clues abate;\nSo quickly learn: just think of that \nInvalid character state,\nAnd you the answer will come at!"];
+ "If not for you these clues abate;\nSo quickly learn: just ponder that \nInvalid Character State,\nAnd you the answer will come at!"];
 
 $('.lock').click( function(){
  blinkr=false;
@@ -184,7 +184,7 @@ audios2.forEach(audio => {
 });
 
 $("#info1").click( function(){
- alert("Author created the sound file of just this portion of the song. You can probably find complete versions of the song online.");
+  alert("Author created the sound file of just this portion of the song. You can probably find complete versions of the song online.");
 });
 
 </script>
