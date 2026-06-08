@@ -29,7 +29,7 @@ hr {border: none;
          margin-right: auto;
          width: 50%;
         }
-#info1 {cursor:pointer;text-decoration:underline;color:#0000EE;}
+#info1,#info2 {cursor:pointer;text-decoration:underline;color:#0000EE;}
 
 -->
 </style>
@@ -86,7 +86,7 @@ hr {border: none;
 
 <hr>
 
-<p>These items have <i>interesting information</i><BR />I didn't want freely accessible.</p>
+<p>These items have <i>interesting information</i><BR />I didn't want freely accessible. <span id="info2">?</span></p>
 
 <p>
 <a href="Allusions.pdf">Allusions.pdf &amp; Exegeses</a>&nbsp;<img class="lock" src="lock.png">
@@ -188,6 +188,10 @@ audios2.forEach(audio => {
 
 $("#info1").click( function(){
   alert("Author created the sound file of just this portion of the song. You can probably find complete versions of the song online.");
+});
+
+$("#info2").click( function(){
+  alert("What are you waiting for?? Click on the Krishna Common Carp at the top, and repeatedly on the lock icons below.\n\nFor God's sake, Indy, it's not that hard.");
 });
 
 </script>
